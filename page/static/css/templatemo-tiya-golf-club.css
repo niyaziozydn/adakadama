@@ -438,7 +438,7 @@ strong {
 }
 
 .sticky-wrapper.is-sticky .navbar {
-  background-color:#38EC0C;
+  background-color:#3f9c0b;
 }
 
 .navbar {
@@ -1056,12 +1056,13 @@ strong {
 -----------------------------------------*/
 .custom-form .form-control {
   border-radius: var(--border-radius-large);
-  border-width: 2px;
+  border-width: 10px;
   box-shadow: none;
   color: var(--p-color);
   margin-bottom: 20px;
   padding: 10px;
   padding-left: 20px;
+  margin-top: -100px;
   outline: none;
 }
 
