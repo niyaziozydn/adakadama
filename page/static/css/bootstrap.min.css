@@ -201,6 +201,7 @@ hr{
     margin-bottom:.5rem;
     font-weight:500;
     line-height:1.2;
+    font-family: system-ui;
     color:var(--bs-heading-color,inherit)
 }
 .h1,h1{
@@ -301,7 +302,8 @@ sup{
 }
 a{
     color:rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
-    text-decoration:underline
+    text-decoration:underline;
+    font-family: system-ui;
 }
 a:hover{
     --bs-link-color-rgb:var(--bs-link-hover-color-rgb)
