@@ -477,3 +477,12 @@
 
     </body>
     </html>
+
+
+
+    {% load thumbnail %}
+    {% for post in posts  %}
+        <h1> {{post.title}}</h1>
+        <img  src="{{ post.cover_image|thumbnail_url:'thumbnail' }}" alt="">
+      
+    {% endfor %}

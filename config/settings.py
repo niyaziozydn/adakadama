@@ -60,7 +60,9 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,6 +125,13 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = 'static/'
 
+
+MEDA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media_files'
+
+
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -131,3 +140,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'avatar': {'size': (184, 184), 'crop': True},
+        'avatar2x': {'size': (60, 60), 'crop': True},
+        'thumbnail': {'size': (184, 184), 'crop': True},
+        'page': {'size': (1500, 300), 'crop': True},
+    },
+}
