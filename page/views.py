@@ -1,5 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import Post
+from django.core.paginator import Paginator
+
 
 
 
@@ -23,7 +25,10 @@ def urunlerimiz_view(request):
 
 def post_view(request):
     posts = Post.objects.all().order_by('-created_on')
+    page_num = request.GET.get('page_num')
+    post_paginator = Paginator(posts,2)
+
     context = dict(
-        posts=posts
+        posts=post_paginator.get_page(page_num),
     )
     return render(request,"page/post.html",context)
