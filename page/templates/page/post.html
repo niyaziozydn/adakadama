@@ -5,6 +5,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content=" Konya içi Adak adama Kurban Kesim. Aynı Gün Teslim">
+
 
         <meta name="description" content="">
         <meta name="author" content="">
@@ -208,17 +210,13 @@ https://templatemo.com/tm-587-tiya-golf-club
                                 <img  src="{{ post.cover_image|thumbnail_url:'thumbnail' }}" alt="">
                                 <h3>{{post.title}}
                             </h3>
-                              <p> {{post.content}}
+                              <p> {{post.content|safe}}
                          
                                 </p>
                                 <p> {{post.created_on.date}} Paylaşıldı
                          
                                 </p>
-                              <ul class="speaker-social">
-                                <li><a href="#"><span class="ti-facebook"></span></a></li>
-                                <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                                <li><a href="#"><span class="ti-linkedin"></span></a></li>
-                              </ul>
+                            
                             </div>
                             {% endfor %}
 
